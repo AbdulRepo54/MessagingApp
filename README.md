@@ -16,3 +16,9 @@ Installation
     Run the Application:
         Start XAMPP and ensure Apache and MySQL services are running.
         Open your browser and navigate to http://localhost/index.php to access the application.
+
+
+        Application:
+
+        
+![92br1d](https://github.com/user-attachments/assets/35426bf9-ff55-44be-bc71-bb03a1beef22)
