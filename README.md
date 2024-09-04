@@ -20,5 +20,4 @@ Installation
 
         Application:
 
-        
-![92br1d](https://github.com/user-attachments/assets/35426bf9-ff55-44be-bc71-bb03a1beef22)
+![GIFMaker_me(1)](https://github.com/user-attachments/assets/d8e2b177-68f3-4b30-ba10-33eab7c05a7e)
