@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #e5ddd5; /* WhatsApp light background */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    background: #fff;
+}
+
+/* Signup Form CSS Code */
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 30px;
+}
+
+.form header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d4d4d4; /* Light gray border */
+}
+
+.form form {
+    margin: 20px 0;
+}
+
+.form form .error-txt {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.form form .name-details {
+    display: flex;
+}
+
+form .name-details .field:first-child {
+    margin-right: 10px;
+}
+
+form .name-details .field:last-child {
+    margin-left: 10px;
+}
+
+.form form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form form .field label {
+    margin-bottom: 2px;
+}
+
+.form form .field input {
+    outline: none;
+}
+
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form form .field i.active::before {
+    color: #333;
+    content: "\f070";
+}
+
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form form .image input {
+    font-size: 17px;
+}
+
+.form form .button input {
+    margin-right: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: #25d366; /* WhatsApp green */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.form .link a {
+    color: #25d366; /* WhatsApp green */
+}
+
+.form .link a:hover {
+    text-decoration: underline;
+}
+
+/* User Area CSS Code */
+.users {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 25px 30px;
+}
+
+.users header,
+.users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #d4d4d4; /* Light gray border */
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+:is(.users, .users-list) .content {
+    display: flex;
+    align-items: center;
+}
+
+.users header .content img {
+    height: 50px;
+    width: 50px;
+}
+
+:is(.users, .users-list) .details {
+    color: #333;
+    margin-left: 15px;
+}
+
+:is(.users, .users-list) .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.users header .logout {
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 15px;
+    background: #25d366; /* WhatsApp green */
+    border-radius: 5px;
+}
+
+.users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users .search .text {
+    font-size: 18px;
+}
+
+.users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.users .search button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #25d366; /* WhatsApp green */
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+}
+
+.users .search button.active {
+    color: #fff;
+    background: #25d366; /* WhatsApp green */
+}
+
+.users .search button.active i::before {
+    content: \f00d;
+}
+
+.users-list {
+    flex: 1;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+:is(.users-list, .chat-box)::-webkit-scrollbar {
+    width: 0px;
+}
+
+.users-list a {
+    margin-bottom: 10px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1;
+}
+
+.users-list a .content img {
+    height: 40px;
+    width: 40px;
+}
+
+.users-list a .content p {
+    color: #67676a;
+}
+
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .status-dot {
+    font-size: 12px;
+    color: #25d366; /* WhatsApp green */
+}
+
+/* We will use this class name in php to show offline status */
+.users-list a .status-dot.offline {
+    color: #ccc;
+}
+
+/* Chat Area CSS Code */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-area header {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+
+.chat-area header .back-icon {
+    font-size: 18px;
+    color: #25d366; /* WhatsApp green */
+}
+
+.chat-area header img {
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+
+.chat-area header span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    background: #e5ddd5; /* WhatsApp background */
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+
+.chat-box .chat {
+    margin: 15px 0;
+}
+
+.chat-box .chat p {
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+
+.chat-box .outgoing {
+    display: flex;
+}
+
+.outgoing .details {
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+
+.outgoing .details p {
+    background: #25d366; /* WhatsApp green */
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+
+.chat-box .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat-box .incoming img {
+    height: 35px;
+    width: 35px;
+}
+
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.incoming .details p {
+    color: #333;
+    background: #fff;
+    border-radius: 18px 18px 18px 0;
+}
+
+.chat-area .typing-area {
+    position: relative;
+    padding: 10px 30px;
+    border-top: 1px solid #ddd;
+}
+
+.typing-area input {
+    height: 45px;
+    width: calc(100% - 50px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.typing-area button {
+    position: absolute;
+    right: 0;
+    height: 45px;
+    width: 50px;
+    border: none;
+    background: #25d366; /* WhatsApp green */
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.typing-area button i {
+    vertical-align: middle;
+}
+
+
+.invalid {
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+    display: none;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.user .delete-btn {
+    position: absolute;
+    right: 0;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Ensure the delete button is small and aligned correctly */
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 5px; /* Add padding to ensure spacing */
+    border-bottom: 1px solid #d4d4d4; /* Border for visual separation */
+}
+
+.user .content {
+    flex: 1; /* Allow content to take up available space */
+    display: flex;
+    align-items: center;
+}
+
+.user .content img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user .details {
+    margin-left: 15px;
+    color: #333;
+}
+
+.user .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user .details p {
+    color: #67676a;
+}
+
+.user .delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 3px 8px; /* Smaller padding for a small button */
+    font-size: 12px; /* Smaller font size */
+    cursor: pointer;
+    border-radius: 3px; /* Rounded corners for button */
+    margin-left: 10px; /* Space between user details and button */
+}
+
